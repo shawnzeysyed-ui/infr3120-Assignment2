@@ -389,5 +389,54 @@ module.exports = app;
 </body>
 </html>
 
+### folder for routes ###
+## index.js ###
+const express = require('express');
+const router = express.Router();
+
+// Home page
+router.get('/', (req, res) => {
+  res.render('home', { title: 'Home' });
+});
+
+// Contact page
+router.get('/contact', (req, res) => {
+  res.render('contact', { title: 'Contact' });
+});
+
+// Projects page
+router.get('/projects', (req, res) => {
+  res.render('projects', { title: 'Projects' });
+});
+
+// About page
+router.get('/about', (req, res) => {
+  res.render('about', { title: 'About' });
+});
+
+module.exports = router;
+#### user.js ###
+var express = require('express');
+var router = express.Router();
+
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
+});
+
+module.exports = router;
+
 ###
+### Public folder ###
+### conatuns images ###
+### Style sheet ##
+body {
+  background-color: rgb(20, 67, 43);
+}
+
+ ### Deployment image ####
+ <img width="936" height="855" alt="image" src="https://github.com/user-attachments/assets/707e4796-ed84-4988-bc7c-c78dcc95e02a" />
+
+ 
+## 
 
